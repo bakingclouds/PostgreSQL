@@ -3,6 +3,8 @@ This script was created to automate the backup of DB's in PostgreSQL using Windo
 Credit to persons who shared parts of this code helping to speed up the creation of this script without re-inventing the wheel or the code in this case ;)
 Use at your own discretion.
 My use case was to backup VMware Cloud Director DB's keeping it simple. Room for improvement is and tunning is there
+
+PGAdmin installation is needed for this script to work
 #>
 
 ##### Create file to store password into profile of account that will execute the manual tasks/scheduled tasks
@@ -53,7 +55,7 @@ $mailTo = "mon@lab.local"
 $mailSubject = "VCD PostgreSQL Backup logs"
 $mailBody = "Transcript of executed job atteched. Powered by BakingClouds - Guillermo Ramallo"
 
-# pg_dump path
+# pg_dump path. Update below if you installed PGAdmin in different path
 cd "C:\Program Files (x86)\pgAdmin 4\v4\runtime\"
 
 ##### Run backup task - Don't edit below this line #####
